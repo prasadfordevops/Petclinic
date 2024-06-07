@@ -1,4 +1,3 @@
-FROM openjdk:8
+FROM tomcat:9.0
 EXPOSE 8082
-ADD target/petclinic.war petclinic.war
-ENTRYPOINT ["java","-jar","/petclinic.war"]
+COPY target/petclinc.war /user/local/tomcat/webapps/
